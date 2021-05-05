@@ -16,7 +16,7 @@
             <div class="col-6">
                 {% for superhero in all_superheroes %}
                 <h4>{{superhero.name}}</h4>
-                <a href="#" class="btn btn-sm btn-primary">Details</a>
+                <a href="{% url 'superheroes:detail' superhero.id %}" class="btn btn-sm btn-primary">Details</a>
                 {% endfor %}
             </div>
             <div class="col-6"></div>
