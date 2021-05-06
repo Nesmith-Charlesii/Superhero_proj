@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Sansita&display=swap');
+
+html, body{
+    background-image:url('https://cdn.wallpapersafari.com/18/98/YOzg1a.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+h2{
+    font-family: "Fredericka the Great", sans-serif;
+    font-weight: bold;
+    color: gold;
+}
+
+h4{
+    font-family: "Fredericka the Great", sans-serif;
+    padding-top: 30px;
+    color: white;
+}
+
+.details i{
+    color: gold;
+    font-weight:bold;
+}
+
+input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group b{
+    color: rgb(30,20,150);
+}
+
+.btn {
+    border: 1px solid black;
+}
+
+#create-btn{
+    color: white !important;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: rgb(30,20,150)
+}
+
+#create-btn:hover{
+    text-decoration: none;
+    color: gold !important;
+}

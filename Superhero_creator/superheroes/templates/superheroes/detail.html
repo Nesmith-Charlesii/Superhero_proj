@@ -17,10 +17,12 @@
             <h2>{{superhero.name}}</h2>
             <br>
             <div class="details">
-                <h4>Alter Ego: {{superhero.alter_ego_name}}</h4>
-                <h4>Primary Ability: {{superhero.primary_ability}}</h4>
-                <h4>Secondary Ability:{{superhero.secondary_ability}}</h4>
-                <h4>Catchphrase: {{superhero.catchphrase}}</h4>
+                <h4><b>Alter Ego</b>: <i>{{superhero.alter_ego_name}}</i></h4>
+                <h4><b>Primary Ability</b>: <i>{{superhero.primary_ability}}</i></h4>
+                <h4><b>Secondary Ability</b>: <i>{{superhero.secondary_ability}}</i></h4>
+                <h4><b>Catchphrase</b>: <i>{{superhero.catchphrase}}</i></h4>
+                <br>
+                <a id="create-btn" href="{% url 'superheroes:create_superhero' %}">Create Superhero</a>
             </div>
         </div>
         <div class="col-4">
@@ -29,11 +31,11 @@
             <form action="{% url 'superheroes:update_superhero' superhero.id%}" method="post">
                 {% csrf_token %}
                 <div class="form-group">
-                    Name: <input class="form-control" type="text" name="name" id="name">
-                    Alter Ego: <input class="form-control" type="text" name="alter_ego" id="alter_ego">
-                    Primary Ability: <input class="form-control" type="text" name="primary_ability" id="primary_ability">
-                    Secondary Ability: <input class="form-control" type="text" name="secondary_ability" id="secondary_ability">
-                    Catchphrase: <input class="form-control" type="text" name="catchphrase" id="catchphrase">
+                    <b>Name:</b> <input class="form-control" type="text" name="name" id="name">
+                    <b>Alter Ego:</b> <input class="form-control" type="text" name="alter_ego" id="alter_ego">
+                    <b>Primary Ability:</b> <input class="form-control" type="text" name="primary_ability" id="primary_ability">
+                    <b>Secondary Ability:</b> <input class="form-control" type="text" name="secondary_ability" id="secondary_ability">
+                    <b>Catchphrase:</b> <input class="form-control" type="text" name="catchphrase" id="catchphrase">
                     <br>
                     <input class="btn btn-sm btn-warning" type="submit" value="Update">
                 </div>
