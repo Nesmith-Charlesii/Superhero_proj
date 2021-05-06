@@ -6,18 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/create.css' %}">
     <title>create superhero</title>
 </head>
 <body>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center my-3">
         <form action="{% url 'superheroes:create_superhero' %}" method="post">
+            <h1>Create Superhero</h1>
+            <br>
         {% csrf_token %}
             <div class="form-group">
-                Name: <input class="form-control" type="text" name="name" id="name">
-                Alter Ego: <input class="form-control" type="text" name="alter_ego" id="alter_ego">
-                Primary Ability: <input class="form-control" type="text" name="primary_ability" id="primary_ability">
-                Secondary Ability: <input class="form-control" type="text" name="secondary_ability" id="secondary_ability">
-                Catchphrase: <input class="form-control" type="text" name="catchphrase" id="catchphrase">
+                <b>Name:</b> <input class="form-control" type="text" name="name" id="name">
+                <b>Alter Ego:</b> <input class="form-control" type="text" name="alter_ego" id="alter_ego">
+                <b>Primary Ability:</b> <input class="form-control" type="text" name="primary_ability" id="primary_ability">
+                <b>Secondary Ability:</b> <input class="form-control" type="text" name="secondary_ability" id="secondary_ability">
+                <b>Catchphrase:</b> <input class="form-control" type="text" name="catchphrase" id="catchphrase">
                 <br>
                 <input class="btn btn-sm btn-success" type="submit" value="Create">
             </div>
