@@ -26,7 +26,7 @@ body {
 
 @keyframes spawn{
     50%{
-        opacity: .1;
+        opacity: 0;
     }
 }
 
