@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Sansita&display=swap');
+
+h1 {
+    text-align: center
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#spawn {
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    animation-name: spawn;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spawn{
+    50%{
+        opacity: .1;
+    }
+}
+
+.characters {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Fredericka the Great";
+}
+
+h1{
+    letter-spacing: 3px;
+    font-family: "Fredericka the Great", sans-serif;
+}
+
+#anchor-detail {
+    font-family: "Sansita", sans-serif;
+    color: red;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    border: 3px solid grey;
+    border-radius: 50%;
+    padding: 7px;
+    margin-top: 15px;
+}
+
+#anchor-detail:hover {
+    text-decoration: none;
+    animation-name: highlight;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes highlight {
+    0%{
+        background-color:black;
+    }
+    100%{
+        color: rgb(240,20,20);
+        border: 3px solid maroon;
+        background-color: rgb(30,30,30);
+    }
+}
+
