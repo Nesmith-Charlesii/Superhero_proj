@@ -11,8 +11,8 @@
     <title>create superhero</title>
 </head>
 <body>
-    <div class="d-flex justify-content-center my-3">
-        <form action="{% url 'superheroes:create_superhero' %}" method="post">
+    <div class="d-flex justify-content-center">
+        <form action="{% url 'superheroes:create_superhero' %}" method="post" class="my-5">
             <h1><u>Create Superhero</u></h1>
             <br>
         {% csrf_token %}
