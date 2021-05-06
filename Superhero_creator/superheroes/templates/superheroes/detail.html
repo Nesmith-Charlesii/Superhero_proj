@@ -7,25 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>superhero details</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/details.css' %}">
 </head>
 <body>
-    <h2>{{superhero.name}}</h2>
-    <ul>
-        <li><h4>Alter Ego:</h4> {{superhero.alter_ego_name}}</li>
-        <li><h4>Primary Ability:</h4> {{superhero.primary_ability}}</li>
-        <li><h4>Secondary Ability:</h4> {{superhero.secondary_ability}}</li>
-        <li><h4>Catchphrase:</h4> {{superhero.catchphrase}}</li>
-    </ul>
-    <h2>Update {{superhero.name}}</h2>
-    <form action="{% url 'superheroes:update_superhero' superhero.id%}" method="post">
-        {% csrf_token %}
-        Name: <input type="text" name="name" id="name">
-        Alter Ego: <input type="text" name="alter_ego" id="alter_ego">
-        Primary Ability: <input type="text" name="primary_ability" id="primary_ability">
-        Secondary Ability: <input type="text" name="secondary_ability" id="secondary_ability">
-        Catchphrase: <input type="text" name="catchphrase" id="catchphrase">
-        <input class="btn btn-sm btn-warning" type="submit" value="Update">
-    </form>
-    <a href="{% url 'superheroes:delete' superhero.id %}" class="btn btn-sm btn-danger">Delete</a>
+    <div class="row my-5">
+        <div class="col-2"></div>
+        <div class="col-4">
+            <h2>{{superhero.name}}</h2>
+            <br>
+            <div class="details">
+                <h4>Alter Ego: {{superhero.alter_ego_name}}</h4>
+                <h4>Primary Ability: {{superhero.primary_ability}}</h4>
+                <h4>Secondary Ability:{{superhero.secondary_ability}}</h4>
+                <h4>Catchphrase: {{superhero.catchphrase}}</h4>
+            </div>
+        </div>
+        <div class="col-4">
+            <h2>Update {{superhero.name}}</h2>
+            <br>
+            <form action="{% url 'superheroes:update_superhero' superhero.id%}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    Name: <input class="form-control" type="text" name="name" id="name">
+                    Alter Ego: <input class="form-control" type="text" name="alter_ego" id="alter_ego">
+                    Primary Ability: <input class="form-control" type="text" name="primary_ability" id="primary_ability">
+                    Secondary Ability: <input class="form-control" type="text" name="secondary_ability" id="secondary_ability">
+                    Catchphrase: <input class="form-control" type="text" name="catchphrase" id="catchphrase">
+                    <br>
+                    <input class="btn btn-sm btn-warning" type="submit" value="Update">
+                </div>
+            </form>
+            <a href="{% url 'superheroes:delete' superhero.id %}" class="btn btn-sm btn-danger">Delete this Character</a>
+        </div>
+    </div>
 </body>
 </html>
