@@ -22,7 +22,7 @@
                 <h4><b>Secondary Ability</b>: <i>{{superhero.secondary_ability}}</i></h4>
                 <h4><b>Catchphrase</b>: <i>{{superhero.catchphrase}}</i></h4>
                 <br>
-                <a id="create-btn" href="{% url 'superheroes:create_superhero' %}">Create Superhero</a>
+                <a href="{% url 'superheroes:create_superhero' %}" class="btn btn-sm btn-primary">Create Superhero</a>
                 <br>
                 <br>
                 <a href="{% url 'superheroes:index' %}" class="btn btn-sm btn-success">Back</a>
