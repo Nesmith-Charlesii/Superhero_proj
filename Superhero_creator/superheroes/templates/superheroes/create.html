@@ -13,7 +13,7 @@
 <body>
     <div class="d-flex justify-content-center my-3">
         <form action="{% url 'superheroes:create_superhero' %}" method="post">
-            <h1>Create Superhero</h1>
+            <h1><u>Create Superhero</u></h1>
             <br>
         {% csrf_token %}
             <div class="form-group">
@@ -23,7 +23,14 @@
                 <b>Secondary Ability:</b> <input class="form-control" type="text" name="secondary_ability" id="secondary_ability">
                 <b>Catchphrase:</b> <input class="form-control" type="text" name="catchphrase" id="catchphrase">
                 <br>
-                <input class="btn btn-sm btn-success" type="submit" value="Create">
+                <div class="d-flex flex-row">
+                    <div class="p-2">
+                        <input class="btn btn-sm btn-success" type="submit" value="Create">
+                    </div>
+                    <div class="p-2">
+                        <a id="home" href="{% url 'superheroes:index' %}" class="btn btn-sm btn-primary">Home</a>
+                    </div>
+                </div>
             </div>
         </form>
     </div>

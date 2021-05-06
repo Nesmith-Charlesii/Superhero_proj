@@ -20,3 +20,15 @@ h1{
 input{
     margin-bottom: 15px;
 }
+
+.d-flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    border: 3px outset black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: black;
+}
